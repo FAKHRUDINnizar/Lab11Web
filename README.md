@@ -149,3 +149,141 @@ Lengkapi kode program untuk menu lainnya yang ada pada Controller Page, sehingga
 - Hasil Browser
 
 ![image](https://user-images.githubusercontent.com/74331125/173873684-829a2526-ef9f-48cf-b89a-a495361f2bcc.png)
+
+### *PRAKTIKUM 12: FRAMEWORK LANJUTAN (CRUD)
+
+### Langkah-langkah Praktikum
+
+### 1. Untuk memulai membuat aplikasi CRUD sederhana, yang perlu disiapkan adalah database server menggunakan MySQL. Pastikan MySQL Server sudah dapat dijalankan melalui XAMPP.
+
+![image](https://user-images.githubusercontent.com/74331125/174431451-61f285bd-b11b-4fb8-98a5-a92e6de9e937.png)
+
+### 2. Konfigurasi Koneksi Database
+
+Selanjutnya membuat konfigurasi untuk menghubungkan dengan database server. Konfigurasi dapat dilakukan dengan dua cara, yaitu pada file `app/config/database.php` atau menggunakan `file .env`. Pada praktikum ini kita gunakan konfigurasi pada file `.env.` Konfigurasi dapat dilakukan dengan cara mengubah beberapa kode pada file `htdocs\lab11_ci\ci4\.env`. Dan hilangkan tanda pagar `#` didepan
+
+![image](https://user-images.githubusercontent.com/74331125/174431735-d4609c4f-57c3-48a4-885b-87365dc73e8c.png)
+
+### 3. Membuat Model
+
+Selanjutnya adalah membuat Model untuk memproses data Artikel. Buat file baru pada direktori `app/Models` dengan nama `ArtikelModel.php`
+
+![image](https://user-images.githubusercontent.com/74331125/174431766-4c2555fa-aa32-40ad-ab53-6bdcd08e03dc.png)
+
+### 4. Membuat Controller
+
+Buat Controller baru dengan nama `Artikel.php` pada direktori `app/Controllers.`
+
+![image](https://user-images.githubusercontent.com/74331125/174431790-9b7abbf5-edce-4f95-aad6-6ff305c97576.png)
+
+### 5.  Membuat View
+
+Buat direktori baru dengan nama `artikel` pada direktori `app/views`, kemudian buat file baru dengan nama `index.php`
+
+![image](https://user-images.githubusercontent.com/74331125/174431959-9b3bf0ae-ed59-4997-af3a-ce2708c53c53.png)
+
+- Selanjutnya buka browser kembali, dengan mengakses url http://localhost:8080/artikel
+
+![image](https://user-images.githubusercontent.com/74331125/174432007-b8c4812e-e174-4c37-b832-fb19b0ef5ebf.png)
+
+- jika Belum ada data yang diampilkan. Kemudian coba tambahkan beberapa data pada database agar dapat ditampilkan datanya.
+
+![image](https://user-images.githubusercontent.com/74331125/174432018-affd4b4b-3098-4df8-a5d5-6a83a6ff7bbb.png)
+
+- Refresh kembali browser, sehingga akan ditampilkan hasilnya.
+
+![image](https://user-images.githubusercontent.com/74331125/174432041-179b74e8-25da-4851-8173-ff1d47aa1c1c.png)
+
+### 6.  Membuat Tampilan Detail Artikel
+
+Tampilan pada saat judul berita di klik maka akan diarahkan ke halaman yang berbeda. Tambahkan fungsi baru pada `Controller Artikel` dengan nama `view().`
+
+![image](https://user-images.githubusercontent.com/74331125/174432126-dbe64fe2-f197-44c1-aa35-5ecd356b990a.png)
+
+### 7.  Membuat View Detail
+
+Buat view baru untuk halaman detail dengan nama `app/views/artikel/detail.php.`
+
+![image](https://user-images.githubusercontent.com/74331125/174432163-5fd9d9a0-ea47-4690-b2eb-92cb166cb80a.png)
+
+### 8. Membuat Routing untuk artikel detail
+
+Buka Kembali file `app/config/Routes.php`, kemudian tambahkan routing untuk `artikel detail`.
+
+![image](https://user-images.githubusercontent.com/74331125/174432195-3bc22a44-734e-4045-8ea9-87ed866bfaf3.png)
+
+- Kemudian Refresh kembali
+
+![image](https://user-images.githubusercontent.com/74331125/174432226-48cf9fd6-77b2-4549-8ab9-8ac147459705.png)
+
+### 9. Membuat Menu Admin
+
+- Menu admin adalah untuk proses `CRUD` data `artikel`. Buat method baru pada `Controller Artikel` dengan nama `admin_index()`.
+
+![image](https://user-images.githubusercontent.com/74331125/174432263-247a56fa-abf8-43c3-8026-c0db6de5a179.png)
+
+- Selanjutnya buat view untuk tampilan admin dengan nama `admin_index.php`
+
+![image](https://user-images.githubusercontent.com/74331125/174432278-73eba2a3-79d7-4dd4-a5f2-3295c05270ec.png)
+
+- membuat file `admin_header.php`
+
+![image](https://user-images.githubusercontent.com/74331125/174432297-29714d64-8180-4572-8bfd-6e523a52e37e.png)
+
+- Membuat file admin_footer.php
+
+![image](https://user-images.githubusercontent.com/74331125/174432322-ad582f0d-f7aa-42fa-bbdc-021bc3589444.png)
+
+- Membuat admin.css
+
+![image](https://user-images.githubusercontent.com/74331125/174432353-95a4272b-2554-49ff-8b7d-cc94fffae952.png)
+
+![image](https://user-images.githubusercontent.com/74331125/174432359-388557a7-28e3-434c-912d-d113bec21cdc.png)
+
+![image](https://user-images.githubusercontent.com/74331125/174432364-8fd7dce7-21bb-488c-a099-f0807c39231c.png)
+
+![image](https://user-images.githubusercontent.com/74331125/174432370-6b6dab39-62b3-4aed-9cb1-baa925f71c06.png)
+
+- Refresh browser
+
+![image](https://user-images.githubusercontent.com/74331125/174432402-58f6be5a-863e-49c0-813b-c56e2d9362bd.png)
+
+- Tambahkan routing untuk menu admin seperti berikut:
+
+![image](https://user-images.githubusercontent.com/74331125/174432414-fedd4927-3ba6-44c2-94eb-e96608147549.png)
+
+- Akses menu admin dengan url http://localhost:8080/admin/artikel
+
+![image](https://user-images.githubusercontent.com/74331125/174432443-414cbbd5-e145-415f-89e8-1a87e2065efc.png)
+
+### 10. Menambah Data Artikel
+
+- Tambahkan `fungsi/method` baru pada `Controller Artikel` dengan nama `add()`.
+
+![image](https://user-images.githubusercontent.com/74331125/174432464-3b56a541-5938-4c48-ba58-315fbd5cd61d.png)
+
+- Kemudian buat view untuk form tambah dengan nama `form_add.php`
+
+![image](https://user-images.githubusercontent.com/74331125/174432477-cb0fa9be-daa6-4f5b-b5f3-b0abb54efbb7.png)
+
+- Setelah itu klik `tambah artikel` maka tampilan nya seperti berikut.
+
+![image](https://user-images.githubusercontent.com/74331125/174432538-57ac6157-90a6-4a68-904c-c440a1ffe2d2.png)
+
+### 12. Mengubah Data
+
+- Tambahkan `fungsi/method` baru pada `Controller Artikel` dengan nama `edit()`.
+
+![image](https://user-images.githubusercontent.com/74331125/174432555-adf80e43-ee0b-4775-88d2-c693e5c88364.png)
+
+- Kemudian buat `view` untuk form tambah dengan `nama form_edit.php`
+
+![image](https://user-images.githubusercontent.com/74331125/174432570-a0d9a30a-0705-4c57-933c-7ad80d916146.png)
+
+- Hasil Browser
+
+![image](https://user-images.githubusercontent.com/74331125/174432584-614c427d-66cf-4c2b-89dd-581a21163b21.png)
+
+### 13. Menghapus Data
+
+![image](https://user-images.githubusercontent.com/74331125/174432598-5fdab169-02b4-47db-bc74-e8ffcb44762f.png)
