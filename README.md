@@ -150,7 +150,7 @@ Lengkapi kode program untuk menu lainnya yang ada pada Controller Page, sehingga
 
 ![image](https://user-images.githubusercontent.com/74331125/173873684-829a2526-ef9f-48cf-b89a-a495361f2bcc.png)
 
-### *PRAKTIKUM 12: FRAMEWORK LANJUTAN (CRUD)
+### *PRAKTIKUM 12: FRAMEWORK LANJUTAN (CRUD)*
 
 ### Langkah-langkah Praktikum
 
