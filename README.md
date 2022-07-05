@@ -414,4 +414,4 @@ Buka Kembali file `app/config/Routes.php`, kemudian tambahkan routing untuk `art
 
 - Ujicoba file upload dengan mengakses menu tambah artikel.
 
-![image](https://user-images.githubusercontent.com/101658076/176992393-9e139077-04fb-4a76-94ae-3a977e2d9424.png)
+![image](https://user-images.githubusercontent.com/74331125/177351275-f29585cd-f7fe-490f-b719-f1c0d8f1eb85.png)
