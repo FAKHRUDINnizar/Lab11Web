@@ -58,3 +58,10 @@ else
 		}
 	}
 }
+
+public function logout()
+
+{
+session()->destroy();
+return redirect()->to('/user/login');
+}
